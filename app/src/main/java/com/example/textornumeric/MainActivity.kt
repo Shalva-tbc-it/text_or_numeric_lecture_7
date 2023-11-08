@@ -47,13 +47,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.btnAddField.setOnClickListener {
 
+            val bottomMarginView = View(this@MainActivity).apply {
+                layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.MATCH_PARENT,
+                    (10 * resources.displayMetrics.density).toInt()
+                )
+            }
+
             if (binding.chbTextOrNumeric.isChecked) {
-                val bottomMarginView = View(this@MainActivity).apply {
-                    layoutParams = LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        (10 * resources.displayMetrics.density).toInt()
-                    )
-                }
                 val editText = EditText(this@MainActivity).apply {
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
@@ -72,12 +73,7 @@ class MainActivity : AppCompatActivity() {
                 binding.llContainer.addView(editText)
                 binding.llContainer.addView(bottomMarginView)
             } else {
-                val bottomMarginView = View(this@MainActivity).apply {
-                    layoutParams = LinearLayout.LayoutParams(
-                        LinearLayout.LayoutParams.MATCH_PARENT,
-                        (10 * resources.displayMetrics.density).toInt()
-                    )
-                }
+
                 val editText = EditText(this@MainActivity).apply {
                     layoutParams = LinearLayout.LayoutParams(
                         LinearLayout.LayoutParams.MATCH_PARENT,
