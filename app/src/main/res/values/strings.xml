@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Text Or Numeric</string>
+    <string name="numeric_or_text">Numeric or Text</string>
+    <string name="numeric">Enter Field Numeric</string>
+    <string name="text">Enter Field Text</string>
+    <string name="text_uncheck">Text</string>
+    <string name="numeric_checked">Numeric</string>
+    <string name="add_field">Add Field</string>
+    <string name="remove_all_view">Remove All View</string>
+</resources>
